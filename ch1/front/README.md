@@ -8,6 +8,8 @@ npm i next
 npm i -D nodemon webpack
 npm i -D eslint
 npm i -D eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
+// ant design
+npm i antd
 ```
 
 ## eslint
