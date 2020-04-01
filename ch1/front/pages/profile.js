@@ -10,7 +10,7 @@ const Profile = () => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.0.4/antd.css" />
       </Head>
       <AppLayout>
-        <div>내 프로필</div>
+        <div>사용자 프로필</div>
       </AppLayout>
     </>
   );
