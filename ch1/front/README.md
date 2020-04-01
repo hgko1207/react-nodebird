@@ -1,5 +1,10 @@
 # React-NodeBird
 
+## Start
+```bash
+npm i
+```
+
 ## Install
 
 ```bash
