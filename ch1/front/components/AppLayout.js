@@ -1,13 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";
-import { Menu, Input, Button, Row, Col, Card, Avatar } from "antd";
+import { Menu, Input, Row, Col, Card, Avatar } from "antd";
+import LoginForm from "./LoginForm";
 
 const dummy = {
   nickname: "고수",
   Post: [],
   Followings: [],
-  Followers: []
+  Followers: [],
+  isLoggedIn: false,
 };
 
 const AppLayout = ({ children }) => {
@@ -28,32 +30,33 @@ const AppLayout = ({ children }) => {
           <Input.Search enterButton style={{ verticalAlign: "middle" }} />
         </Menu.Item>
       </Menu>
-      <Link href="/signup">
-        <Button>회원가입</Button>
-      </Link>
       <Row>
         <Col xs={24} md={6}>
-          <Card
-            actions={[
-              <div key="twit">
-                짹짹
-                <br />
-                {dummy.Post.length}
-              </div>,
-              <div key="following">
-                팔로잉
-                <br />
-                {dummy.Followings.length}
-              </div>,
-              <div key="follower">
-                팔로워
-                <br />
-                {dummy.Followers.length}
-              </div>
-            ]}
-          >
-            <Card.Meta avatar={<Avatar>{dummy.nickname[0]}</Avatar>} title={dummy.nickname} />
-          </Card>
+          {dummy.isLoggedIn ? (
+            <Card
+              actions={[
+                <div key="twit">
+                  짹짹
+                  <br />
+                  {dummy.Post.length}
+                </div>,
+                <div key="following">
+                  팔로잉
+                  <br />
+                  {dummy.Followings.length}
+                </div>,
+                <div key="follower">
+                  팔로워
+                  <br />
+                  {dummy.Followers.length}
+                </div>,
+              ]}
+            >
+              <Card.Meta avatar={<Avatar>{dummy.nickname[0]}</Avatar>} title={dummy.nickname} />
+            </Card>
+          ) : (
+            <LoginForm />
+          )}
         </Col>
         <Col xs={24} md={12}>
           {children}
@@ -65,7 +68,7 @@ const AppLayout = ({ children }) => {
 };
 
 AppLayout.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default AppLayout;
