@@ -16,6 +16,7 @@ npm i -D eslint
 npm i -D eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
 // ant design
 npm i antd
+npm i --save @ant-design/icons
 
 npm i prop-types
 ```
@@ -27,9 +28,11 @@ npm i prop-types
 
 ## Features
 
+- Next
 - prop-types
-- antd degisn
+- antd design
 - custom hook
+- eslint
 
 ## eslint
 
@@ -54,3 +57,13 @@ npm i prop-types
 - \_app.js : root
 - \_error.js : 에러 화면
 - pages : 실제 컴포넌트
+
+## ant design
+
+- Icon
+
+  ```js
+  import { StarOutlined } from "@ant-design/icons";
+
+  <StarOutlined />;
+  ```
