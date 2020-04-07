@@ -33,6 +33,7 @@ npm i prop-types
 - antd design
 - custom hook
 - eslint
+- Redux
 
 ## eslint
 
@@ -57,6 +58,15 @@ npm i prop-types
 - \_app.js : root
 - \_error.js : 에러 화면
 - pages : 실제 컴포넌트
+
+## Redux
+
+- Redux (state) -> React의 state는 쓰지 않아도 된다.
+- 안정성, state 통제가 용이하기 때문에 사용
+- Action -> state를 바꾸는 행동 ex) 로그인 액션
+- Dispatch -> Action을 실행 ex) 로그인 액션 dispatch
+- Reducer -> Action의 결과로 state를 어떻게 바꿀지 정의
+- ex) 로그인 액션 dispatch 시 -> state 변경
 
 ## ant design
 

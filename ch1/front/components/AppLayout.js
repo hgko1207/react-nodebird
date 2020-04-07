@@ -31,14 +31,14 @@ const AppLayout = ({ children }) => {
           <Input.Search enterButton style={{ verticalAlign: "middle" }} />
         </Menu.Item>
       </Menu>
-      <Row gutter={10}>
-        <Col xs={24} md={6}>
+      <Row>
+        <Col xs={24} md={6} style={{ padding: 10 }}>
           {dummy.isLoggedIn ? <UserProfile /> : <LoginForm />}
         </Col>
         <Col xs={24} md={12}>
           {children}
         </Col>
-        <Col xs={24} md={6}>
+        <Col xs={24} md={6} style={{ padding: 10 }}>
           <Link href="https://www.zerocho.com">
             <a target="_blank">Made by ZeroCho</a>
           </Link>
