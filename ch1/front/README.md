@@ -14,36 +14,25 @@ npm i next
 npm i -D nodemon webpack
 npm i -D eslint
 npm i -D eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
+npm i prop-types
+
 // ant design
 npm i antd
 npm i --save @ant-design/icons
 
-npm i prop-types
+// redux
+npm i redux react-redux
 ```
-
-## Hooks
-
-- useCallback : 자식 컴포넌트에 넘기는 함수는 무조건 사용
-- useState
 
 ## Features
 
 - Next
+- React Hooks
 - prop-types
 - antd design
 - custom hook
 - eslint
 - Redux
-
-## eslint
-
-- 코딩 규칙을 정할 수 있다.
-- 협업을 위해 사용한다.
-
-## prop-types
-
-- 자료형을 정의
-- https://www.npmjs.com/package/prop-types
 
 ## Next
 
@@ -59,6 +48,21 @@ npm i prop-types
 - \_error.js : 에러 화면
 - pages : 실제 컴포넌트
 
+## React Hooks
+
+- useCallback : 자식 컴포넌트에 넘기는 함수는 무조건 사용
+- useState
+
+## eslint
+
+- 코딩 규칙을 정할 수 있다.
+- 협업을 위해 사용한다.
+
+## prop-types
+
+- 자료형을 정의
+- https://www.npmjs.com/package/prop-types
+
 ## Redux
 
 - Redux (state) -> React의 state는 쓰지 않아도 된다.
@@ -67,6 +71,7 @@ npm i prop-types
 - Dispatch -> Action을 실행 ex) 로그인 액션 dispatch
 - Reducer -> Action의 결과로 state를 어떻게 바꿀지 정의
 - ex) 로그인 액션 dispatch 시 -> state 변경
+- Redux 설계 시 하나의 파일에 너무 많은 코드를 넣지 말고 분리하면 좋다.
 
 ## ant design
 
