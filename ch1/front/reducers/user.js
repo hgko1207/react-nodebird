@@ -1,4 +1,4 @@
-const intialState = {
+export const intialState = {
   isLoggedIn: false,
   user: {},
 }; // store
@@ -32,3 +32,5 @@ const reducer = (state = intialState, action) => {
       };
   }
 };
+
+export default reducer;
