@@ -23,6 +23,7 @@ npm i --save @ant-design/icons
 // redux
 npm i redux react-redux
 npm i next-redux-wrapper
+npm i react-redux@next
 ```
 
 ## Features
@@ -53,6 +54,7 @@ npm i next-redux-wrapper
 
 - useCallback : 자식 컴포넌트에 넘기는 함수는 무조건 사용
 - useState
+- react-redux 7.1.0 부터 redux hook을 사용할 수 있음
 
 ## eslint
 

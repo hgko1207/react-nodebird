@@ -3,16 +3,16 @@ export const intialState = {
   user: {},
 }; // store
 
-const LOG_IN = "LOG_IN"; // 액션의 이름
-const LOG_OUT = "LOG_OUT";
+export const LOG_IN = "LOG_IN"; // 액션의 이름
+export const LOG_OUT = "LOG_OUT";
 
-const loginAction = {
+export const loginAction = {
   type: LOG_IN,
   data: {
     nickname: "고수",
   },
 };
-const logoutAction = {
+export const logoutAction = {
   type: LOG_OUT,
 };
 
