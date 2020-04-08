@@ -22,6 +22,7 @@ npm i --save @ant-design/icons
 
 // redux
 npm i redux react-redux
+npm i next-redux-wrapper
 ```
 
 ## Features

@@ -22,15 +22,22 @@ const addDummy = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_POST:
+    case ADD_POST: {
       return {
         ...state,
       };
-    case ADD_DUMMY:
+    }
+    case ADD_DUMMY: {
       return {
         ...state,
         mainPosts: [action.data, ...state.mainPosts],
       };
+    }
+    default: {
+      return {
+        ...state,
+      };
+    }
   }
 };
 
