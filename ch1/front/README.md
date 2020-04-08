@@ -73,6 +73,7 @@ npm i next-redux-wrapper
 - Reducer -> Action의 결과로 state를 어떻게 바꿀지 정의
 - ex) 로그인 액션 dispatch 시 -> state 변경
 - Redux 설계 시 하나의 파일에 너무 많은 코드를 넣지 말고 분리하면 좋다.
+- 미들웨어는 액션과 스토어 사이에서 동작한다.
 
 ## ant design
 
