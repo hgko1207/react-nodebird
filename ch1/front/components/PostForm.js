@@ -1,11 +1,10 @@
 import React from "react";
 import { Form, Input, Button } from "antd";
-
-const dummy = {
-  imagePaths: [],
-};
+import { useSelector } from "react-redux";
 
 const PostForm = () => {
+  const { imagePaths } = useSelector((state) => state.post);
+
   return (
     <Form encType="multipart/form-data" style={{ margin: "20px 0" }}>
       <Input.TextArea maxLength={140} placeholder="어떤 신기한 일이 있었나요?" />
@@ -17,7 +16,7 @@ const PostForm = () => {
         </Button>
       </div>
       <div>
-        {dummy.imagePaths.map((v, i) => {
+        {imagePaths.map((v) => {
           return (
             <div key={v} style={{ display: "inline-block" }}>
               <img src={"http:localhost:3065/" + v} style={{ width: "200px" }} alt={v} />
