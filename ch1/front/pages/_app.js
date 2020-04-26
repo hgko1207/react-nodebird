@@ -23,7 +23,7 @@ const NodeBird = ({ Component, store }) => {
 
 NodeBird.propTypes = {
   Component: PropTypes.elementType,
-  store: PropTypes.object,
+  store: PropTypes.object
 };
 
 export default withRedux((initialState, options) => {
@@ -34,7 +34,7 @@ export default withRedux((initialState, options) => {
     applyMiddleware(...middlewares),
     !options.isServer && window.__REDUX_DEVTOOLS_EXTENSION__ !== "undefined"
       ? window.__REDUX_DEVTOOLS_EXTENSION__()
-      : (f) => f
+      : f => f
   );
 
   const store = createStore(reducer, initialState, enhancer);
