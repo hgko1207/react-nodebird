@@ -24,6 +24,9 @@ npm i --save @ant-design/icons
 npm i redux react-redux
 npm i next-redux-wrapper
 npm i react-redux@next
+
+// redux saga
+npm i redux-saga
 ```
 
 ## Features
@@ -77,12 +80,24 @@ npm i react-redux@next
 - Redux 설계 시 하나의 파일에 너무 많은 코드를 넣지 말고 분리하면 좋다.
 - 미들웨어는 액션과 스토어 사이에서 동작한다.
 
+## Redux-saga
+
+- 비동기 동작을 적용하기 위해 사용
+
+## Generator(제너레이터)
+
+함수 실행을 중간에 멈출 수 있고 원할 때 재개할 수 있어 편하다.
+
+```js
+function* generator() {}
+```
+
 ## ant design
 
 - Icon
 
   ```js
-  import { StarOutlined } from "@ant-design/icons";
+  import { StarOutlined } from '@ant-design/icons';
 
   <StarOutlined />;
   ```
