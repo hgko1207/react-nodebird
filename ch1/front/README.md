@@ -90,7 +90,13 @@ npm i redux-saga
 - 기존 컴포넌트에 props 같은 것을 추가할 때 쓴다.
 
 ```js
-function* generator() {}
+function* generator() {
+  // 중단점
+  yield 1;
+  yield* [1, 2, 3, 4];
+}
+
+generator().next();
 ```
 
 ## ant design
