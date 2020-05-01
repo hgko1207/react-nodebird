@@ -83,6 +83,30 @@ npm i redux-saga
 ## Redux-saga
 
 - 비동기 동작을 적용하기 위해 사용
+- put : saga의 dispatch
+- takeEvery
+- takeLatest
+  - 동시에 여러번 take를 실행할 때 마지막 것만 실행
+  - 이전 요청이 끛나지 않은게 있다면 이전 요청을 취소
+  - 예) 로그인 버튼 여러번 눌렀을 때 한번만 동작하도록
+
+```js
+// saga에서는 while(true) 가능
+// take를 여러번 반복해서 사용하기 위해
+function* watchHello() {
+  while (true) {
+    yield take(HELLO_SAGA);
+    console.log('test');
+  }
+}
+
+// takeEvery : while-take를 대신
+function* watchHello() {
+  yield takeEvery(HELLO_SAGA, function* () {
+    console.log('test');
+  });
+}
+```
 
 ## Generator(제너레이터)
 
